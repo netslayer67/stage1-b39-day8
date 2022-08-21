@@ -100,16 +100,18 @@
             </div>
 
             <div class="mb-3">
-                <label for="inputImage" class="form-label text-bold font">Upload Image</label>
-                <input type="file" class="form-control" id="inputImage" name="inputImage" value="{{data.image}}" aria-describedby="emailHelp">
-                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                <label style="font-weight: bold; margin-top: 10px; margin-bottom: 10px" for="checkBox">Upload Image</label>
+                <div class="input-group">
+                <input type="file" class="form-control " id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                <div class="input-group-text bg-white" id="btnGroupAddon"><img src="/assets/images/file.png" alt="file" style="width: 20px;"></div>
+                <!-- <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"><img src="assets/file.png" alt="file" style="width: 20px;"></button> -->
               </div>
             <!-- <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div> -->
 
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
                 <button type="submit" class="btn bg-dark text-white px-5 rounded-pill mt-3">Submit</button>
             </div>
           </form>
