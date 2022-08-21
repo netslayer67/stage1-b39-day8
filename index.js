@@ -1,7 +1,7 @@
 const express = require('express')
 
 const app = express()
-const port = 8000
+const port = 5000
 
 app.set('view engine', 'hbs') // set view engine hbs
 app.use('/assets', express.static(__dirname + '/assets')) // path folder untuk assets
@@ -219,6 +219,6 @@ function getDistanceTime(start, end) {
 }
 
 
-app.listen(8000, function () {
+app.listen(5000, function () {
     console.log(`Server running on port ${port}`);
 })
