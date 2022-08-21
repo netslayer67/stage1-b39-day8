@@ -194,14 +194,18 @@ function getDistanceTime(start, end) {
     let secondInHours = 3600 // 1 jam sama dengan 3600 detik
     let hoursInDay = 24 // 1 hari 24 jam
     let daysInMonth = 30 // 1 bulan 30 hari
+    let monthsInYear = 12 // 1 tahun 12 bulan
 
+    let distanceYear = Math.floor(distance / (milisecond * secondInHours * hoursInDay * daysInMonth * monthsInYear))
     let distanceMonth = Math.floor(distance / (milisecond * secondInHours * hoursInDay * daysInMonth))
     let distanceDay = Math.floor(distance / (milisecond * secondInHours * hoursInDay))
     let distanceHours = Math.floor(distance / (milisecond * 60 * 60))
     let distanceMinutes = Math.floor(distance / (milisecond * 60))
     let distanceSeconds = Math.floor(distance / milisecond)
   
-    if (distanceMonth > 0) {
+    if (distanceYear > 0) {
+        return `${distanceYear} years ago`
+    } else if (distanceMonth > 0) {
         return `${distanceMonth} months ago`
     } else if (distanceDay > 0) {
         return `${distanceDay} days ago`
